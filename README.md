@@ -6,6 +6,12 @@ Triple Axis Accelerometer Breakout - MMA8452Q
 
 This breakout board makes it easy to use the tiny MMA8452Q accelerometer in your project. The MMA8452Q is a smart low-power, three-axis, capacitive micro-machined accelerometer with 12 bits of resolution.
 
+Repository Contents
+-------------------
+* **/Firmware** - Example Arduino sketches for interfacing with the accelerometer
+* **/Hardware** - All Eagle design files (.brd, .sch)
+
+
 License Information
 -------------------
 
