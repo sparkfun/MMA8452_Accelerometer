@@ -2,7 +2,7 @@ Triple Axis Accelerometer Breakout - MMA8452Q
 =============================================
 
 [![Triple Axis Accelerometer Breakout - MMA8452Q](https://dlnmh9ip6v2uc.cloudfront.net/images/products/1/0/9/5/5/10955-01_i_ma.jpg)  
-*Triple Axis Accelerometer Breakout - MMA8452Q (SEN-10995)*](https://www.sparkfun.com/products/10995)
+*Triple Axis Accelerometer Breakout - MMA8452Q (SEN-10955)*](https://www.sparkfun.com/products/10955)
 
 This breakout board makes it easy to use the tiny MMA8452Q accelerometer in your project. The MMA8452Q is a smart low-power, three-axis, capacitive micro-machined accelerometer with 12 bits of resolution.
 
