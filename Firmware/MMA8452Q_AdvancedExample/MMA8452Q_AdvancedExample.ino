@@ -142,8 +142,7 @@ void readAccelData(int * destination)
     if (rawData[i] > 0x7F)
     {  
       // If the number is negative, we have to make it so manually (no 12-bit data type)
-      destination[i/2] = ~destination[i/2] + 1;
-      destination[i/2] *= -1;  // Transform into negative 2's complement #
+      destination[i/2] -= 0x1000;
     }
   }
 }

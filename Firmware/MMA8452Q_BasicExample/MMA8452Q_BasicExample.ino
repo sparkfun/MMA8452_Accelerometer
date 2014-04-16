@@ -83,8 +83,7 @@ void readAccelData(int *destination)
     // If the number is negative, we have to make it so manually (no 12-bit data type)
     if (rawData[i*2] > 0x7F)
     {  
-      gCount = ~gCount + 1;
-      gCount *= -1;  // Transform into negative 2's complement #
+      gCount -= 0x1000;
     }
 
     destination[i] = gCount; //Record this gCount into the 3 int array
