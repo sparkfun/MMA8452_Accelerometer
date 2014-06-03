@@ -1,7 +1,7 @@
-MMA8452 Firmware
-================
+MMA8452Q Firmware
+=================
 
-These are example Arduino sketches for interfacing with the MMA8452 Accelerometer breakout. You will need Arduino 1.0+ to run them. 
+Arduino library and stand-alone sketches.
 
-* MMA8452_BasicExample shows how to read the X/Y/Z accelerations and basic functions of the accelerometer.
-* MMA8452_AdvancedExample shows how to use most features of the accelerometer, including single/double tap readings. 
+* For the MMA8452Q Arduino library, check out the _libraries_ folder.
+* For (legacy) stand-alone sketches (no library required), check out the _MMA8452Q Sketches_ folder.
