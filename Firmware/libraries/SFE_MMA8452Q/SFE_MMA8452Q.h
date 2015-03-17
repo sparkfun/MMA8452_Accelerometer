@@ -97,7 +97,7 @@ public:
 	byte readTap();
 	byte readPL();
 	
-    int x, y, z;
+    short x, y, z;
 	float cx, cy, cz;
 private:
 	byte address;
