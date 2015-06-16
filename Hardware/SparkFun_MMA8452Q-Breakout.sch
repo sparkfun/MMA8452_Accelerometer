@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.2.0">
+<eagle version="7.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -7131,7 +7131,7 @@ Various fiducial points for machine vision alignment.</description>
 <text x="5.08" y="50.8" size="1.778" layer="97">* Added 10k pull-up resistors to I2C lines</text>
 <text x="5.08" y="48.26" size="1.778" layer="97">* Changed the jumper configuration, single instead of 2-way</text>
 <text x="5.08" y="45.72" size="1.778" layer="97">* Minor adjustments to some silk, flipped axis + direction</text>
-<text x="167.64" y="83.82" size="1.778" layer="97">Jumper open by default, so SA0 = 0</text>
+<text x="167.64" y="83.82" size="1.778" layer="97">Jumper open by default, so SA0 = 1</text>
 <text x="236.22" y="7.62" size="3.81" layer="94">v11</text>
 </plain>
 <instances>
