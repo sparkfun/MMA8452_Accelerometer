@@ -115,7 +115,7 @@ void MMA8452Q::setODR(MMA8452Q_ODR odr)
 {
 	// Must be in standby mode to make changes!!!
 	byte ctrl = readRegister(CTRL_REG1);
-	ctrl &= 0xCF; // Mask out data rate bits
+	ctrl &= 0xC7; // Mask out data rate bits
 	ctrl |= (odr << 3);
 	writeRegister(CTRL_REG1, ctrl);
 }
