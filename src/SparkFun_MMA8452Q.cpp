@@ -92,7 +92,7 @@ void MMA8452Q::read()
 //	returns 0 if no new data is present, or a 1 if new data is available.
 byte MMA8452Q::available()
 {
-	return (readRegister(STATUS) & 0x08) >> 3;
+	return (readRegister(STATUS_MMA8452Q) & 0x08) >> 3;
 }
 
 // SET FULL-SCALE RANGE
