@@ -92,7 +92,7 @@ void MMA8452Q::read()
 //	returns 0 if no new data is present, or a 1 if new data is available.
 byte MMA8452Q::available()
 {
-	return (readRegister(STATUS) & 0x08) >> 3;
+	return (readRegister(STATUS_MMA8452Q) & 0x08) >> 3;
 }
 
 // SET FULL-SCALE RANGE
@@ -115,7 +115,7 @@ void MMA8452Q::setODR(MMA8452Q_ODR odr)
 {
 	// Must be in standby mode to make changes!!!
 	byte ctrl = readRegister(CTRL_REG1);
-	ctrl &= 0xCF; // Mask out data rate bits
+	ctrl &= 0xC7; // Mask out data rate bits
 	ctrl |= (odr << 3);
 	writeRegister(CTRL_REG1, ctrl);
 }

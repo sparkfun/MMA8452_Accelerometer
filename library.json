@@ -1,0 +1,13 @@
+{
+  "name": "SparkFun_MMA8452Q",
+  "keywords": "sensor, i2c, accelerometer",
+  "description": "Basic I2C functionality of the MMA8452Q Accelerometer Breakout",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/sparkfun/SparkFun_MMA8452Q_Arduino_Library.git"
+  },
+  "version": "1.2.0",
+  "frameworks": "arduino",
+  "platforms": "*"
+}
