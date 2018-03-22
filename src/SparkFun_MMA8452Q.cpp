@@ -14,7 +14,7 @@ Development environment specifics:
 	Hardware Platform: Arduino Uno
 
 	**Updated for Arduino 1.6.4 5/2015**
-	
+
 This code is beerware; if you see me (or any other SparkFun employee) at the
 local, and you've found our code helpful, please buy us a round!
 
@@ -43,26 +43,26 @@ MMA8452Q::MMA8452Q(byte addr)
 byte MMA8452Q::init(MMA8452Q_Scale fsr, MMA8452Q_ODR odr)
 {
 	scale = fsr; // Haul fsr into our class variable, scale
-	
+
 	Wire.begin(); // Initialize I2C
-	
+
 	byte c = readRegister(WHO_AM_I);  // Read WHO_AM_I register
-	
+
 	if (c != 0x2A) // WHO_AM_I should always be 0x2A
 	{
 		return 0;
 	}
-	
+
 	standby();  // Must be in standby to change registers
-	
+
 	setScale(scale);  // Set up accelerometer scale
 	setODR(odr);  // Set up output data rate
 	setupPL();  // Set up portrait/landscape detection
 	// Multiply parameter by 0.0625g to calculate threshold.
 	setupTap(0x80, 0x80, 0x08); // Disable x, y, set z to 0.5g
-	
+
 	active();  // Set to active to start reading
-	
+
 	return 1;
 }
 
@@ -78,7 +78,7 @@ void MMA8452Q::read()
 	byte rawData[6];  // x/y/z accel register data stored here
 
 	readRegisters(OUT_X_MSB, rawData, 6);  // Read the six raw data registers into data array
-	
+
 	x = ((short)(rawData[0]<<8 | rawData[1])) >> 4;
 	y = ((short)(rawData[2]<<8 | rawData[3])) >> 4;
 	z = ((short)(rawData[4]<<8 | rawData[5])) >> 4;
@@ -109,7 +109,7 @@ void MMA8452Q::setScale(MMA8452Q_Scale fsr)
 
 // SET THE OUTPUT DATA RATE
 //	This function sets the output data rate of the MMA8452Q.
-//	Possible values for the odr parameter are: ODR_800, ODR_400, ODR_200, 
+//	Possible values for the odr parameter are: ODR_800, ODR_400, ODR_200,
 //	ODR_100, ODR_50, ODR_12, ODR_6, or ODR_1
 void MMA8452Q::setODR(MMA8452Q_ODR odr)
 {
@@ -161,7 +161,7 @@ void MMA8452Q::setupTap(byte xThs, byte yThs, byte zThs)
 }
 
 // READ TAP STATUS
-//	This function returns any taps read by the MMA8452Q. If the function 
+//	This function returns any taps read by the MMA8452Q. If the function
 //	returns no new taps were detected. Otherwise the function will return the
 //	lower 7 bits of the PULSE_SRC register.
 byte MMA8452Q::readTap()
@@ -195,7 +195,7 @@ void MMA8452Q::setupPL()
 byte MMA8452Q::readPL()
 {
 	byte plStat = readRegister(PL_STATUS);
-	
+
 	if (plStat & 0x40) // Z-tilt lockout
 		return LOCKOUT;
 	else // Otherwise return LAPO status
@@ -247,9 +247,12 @@ byte MMA8452Q::readRegister(MMA8452Q_Register reg)
 
 	Wire.requestFrom(address, (byte) 1); //Ask for 1 byte, once done, bus is released by default
 
-	while(!Wire.available()) ; //Wait for the data to come back
-
-	return Wire.read(); //Return this one byte
+	if(Wire.available()){ //Wait for the data to come back
+		return Wire.read(); //Return this one byte
+	}
+	else{
+		return 0;
+	}
 }
 
 // READ MULTIPLE REGISTERS
@@ -262,9 +265,8 @@ void MMA8452Q::readRegisters(MMA8452Q_Register reg, byte *buffer, byte len)
 	Wire.endTransmission(false); //endTransmission but keep the connection active
 
 	Wire.requestFrom(address, len); //Ask for bytes, once done, bus is released by default
-
-	while(Wire.available() < len); //Hang out until we get the # of bytes we expect
-
-	for(int x = 0 ; x < len ; x++)
-		buffer[x] = Wire.read();    
+	if(Wire.available() == len){
+		for(int x = 0 ; x < len ; x++)
+			buffer[x] = Wire.read();
+	}
 }
