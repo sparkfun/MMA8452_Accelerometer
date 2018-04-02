@@ -25,7 +25,9 @@ Repository Contents
 
 Documentation
 --------------
-* **[Library](https://github.com/sparkfun/SparkFun_MMA8452Q_Arduino_Library)** - Arduino library for the accelerometer.
+* Library
+  * [Arduino Library](https://github.com/sparkfun/SparkFun_MMA8452Q_Arduino_Library)** - Arduino library for the accelerometer.
+  * [Particle Library](https://github.com/sparkfun/SparkFun_MMA8452Q_Particle_Library) - Particle library for the accelerometer.
 * **[Hookup Guide](https://learn.sparkfun.com/tutorials/mma8452q-accelerometer-breakout-hookup-guide)** - Basic hookup guide for the accelerometer.
 * **[SparkFun Fritzing repo](https://github.com/sparkfun/Fritzing_Parts)** - Fritzing diagrams for SparkFun products.
 * **[SparkFun 3D Model repo](https://github.com/sparkfun/3D_Models)** - 3D models of SparkFun products. 
