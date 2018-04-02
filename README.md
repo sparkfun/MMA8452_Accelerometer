@@ -1,9 +1,17 @@
 SparkFun Triple Axis Accelerometer Breakout - MMA8452Q
 =============================================
 
-![SparkFun Triple Axis Accelerometer Breakout - MMA8452Q](https://dlnmh9ip6v2uc.cloudfront.net/images/products/1/0/9/5/5/10955-01_i_ma.jpg)  
-
-[*SparkFun Triple Axis Accelerometer Breakout - MMA8452Q(SEN-10955)*](https://www.sparkfun.com/products/10955)
+<table class="table table-hover table-striped table-bordered">
+  <tr align="center">
+   <td><a href="https://cdn.sparkfun.com//assets/parts/9/5/1/5/12756-00.jpg"><img src="https://cdn.sparkfun.com//assets/parts/9/5/1/5/12756-00.jpg" title="SparkFun Triple Axis Accelerometer Breakout - MMA8452Q"></a></td>
+   <td><a href="https://cdn.sparkfun.com//assets/parts/1/0/0/0/2/13926-02.jpg"><img src="https://cdn.sparkfun.com//assets/parts/1/0/0/0/2/13926-02.jpg" title="SparkFun Triple Axis Accelerometer Breakout - MMA8452Q (with Headers)"></a></td>
+  </tr>
+  <tr align="center">
+    <td>SparkFun Triple Axis Accelerometer Breakout - MMA8452Q [<a href="https://www.sparkfun.com/products/12756">SEN-12756</a>]</td>
+    <td>SparkFun Triple Axis Accelerometer Breakout - MMA8452Q (with Headers)
+[<a href="https://www.sparkfun.com/products/13926">BOB-13926</a>]</td>
+  </tr>
+</table>
 
 This breakout board makes it easy to use the tiny MMA8452Q accelerometer in your project. 
 The MMA8452Q is a smart low-power, three-axis, capacitive micro-machined accelerometer with 12 bits of resolution.
@@ -22,6 +30,11 @@ Documentation
 * **[SparkFun Fritzing repo](https://github.com/sparkfun/Fritzing_Parts)** - Fritzing diagrams for SparkFun products.
 * **[SparkFun 3D Model repo](https://github.com/sparkfun/3D_Models)** - 3D models of SparkFun products. 
 
+Product Versions
+----------------
+* [BOB-13926](https://www.sparkfun.com/products/13926) - Version 11 with headers
+* [SEN-12756](https://www.sparkfun.com/products/12756) - Version 11
+* *[SEN-10955 (Retired)](https://www.sparkfun.com/products/retired/10955)* - Version 11
 
 License Information
 -------------------
